@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-// Define a struct to unmarshal the API response
+
 type ApiResponse struct {
 	Results []struct {
 		Name struct {
@@ -49,7 +49,7 @@ func main() {
 	}
 
 	// Close the responses channel once all goroutines have finished
-	go func() {
+	go  func() {
 		wg.Wait()
 		close(responses)
 	}()
